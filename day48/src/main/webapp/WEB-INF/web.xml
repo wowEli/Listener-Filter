@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app><!-- 루트 태그 최상위 태그로 web-app태그 사용 -->
+
+	<context-param>
+		<param-name>name</param-name><!-- 루트에 name이 있는데 -->
+		<param-value>timo</param-value><!-- timo래 -->
+	</context-param>
+	
+	<context-param>
+		<param-name>encoding</param-name><!-- 인코딩 정보는 -->
+		<param-value>UTF-8</param-value><!-- UTF-8이래 -->
+	</context-param>
+	
+	<!-- 어떤 페이지에서 에러 페이지가 나올 지 모르니까 에러페이지 일괄설정 -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type><!-- 에러가 발생시 -->
+		<location>/error/error.jsp</location><!-- 일괄적으로 같은 에러페이지 보여주기 -->
+	</error-page>
+	
+	<error-page>
+		<exception-type>404</exception-type><!-- 사용자가 특정에러를 발생시 -->
+		<location>/error/error404.jsp</location><!-- 그에 맞는 에러페이지 보여주기 -->
+	</error-page>
+	
+	
+	
+</web-app>
